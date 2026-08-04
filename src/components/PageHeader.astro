@@ -1,0 +1,35 @@
+---
+const {
+  eyebrow,
+  title,
+  description,
+} = Astro.props;
+---
+
+<section
+  class="relative flex min-h-[430px] items-end overflow-hidden bg-cover bg-center pt-20"
+  style="background-image: url('/images/canchas-volcan-courts.jpg');"
+>
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-volcan-dark/95 via-volcan-blue/85 to-volcan-blue/40"
+  >
+  </div>
+
+  <div
+    class="relative z-10 mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 md:py-20"
+  >
+    <p
+      class="mb-3 text-sm font-black uppercase tracking-[0.2em] text-volcan-green"
+    >
+      {eyebrow}
+    </p>
+
+    <h1 class="text-4xl font-black text-white sm:text-5xl lg:text-6xl">
+      {title}
+    </h1>
+
+    <p class="mt-5 max-w-2xl text-base text-gray-200 sm:text-lg">
+      {description}
+    </p>
+  </div>
+</section>

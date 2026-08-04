@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-volcan-blue: #0627aa;
+  --color-volcan-dark: #03134f;
+  --color-volcan-green: #baeb2d;
+  --color-volcan-gray: #737373;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}

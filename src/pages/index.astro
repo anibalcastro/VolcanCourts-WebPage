@@ -1,0 +1,147 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Pickleball en La Fortuna"
+  description="Tres canchas de pickleball con vista al Volcán Arenal en La Fortuna, Costa Rica."
+>
+  <!-- Portada -->
+  <section
+    class="relative flex min-h-[680px] items-center bg-cover bg-center pt-20 lg:min-h-[780px]"
+    style="background-image: url('/images/Image1');"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-volcan-dark via-volcan-blue/80 to-volcan-blue/30"
+    >
+    </div>
+
+    <div
+      class="relative z-10 mx-auto w-full max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="mb-4 text-sm font-black uppercase tracking-[0.2em] text-volcan-green"
+        >
+          La Fortuna, Costa Rica
+        </p>
+
+        <h1
+          class="text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          Pickleball con vista al Volcán Arenal
+        </h1>
+
+        <p
+          class="mt-6 max-w-2xl text-base leading-relaxed text-gray-200 sm:text-lg md:text-xl"
+        >
+          Disfruta nuestras tres canchas, participa en los Open Play
+          y forma parte de la comunidad de Volcan Courts.
+        </p>
+
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/canchas"
+            class="rounded-lg bg-volcan-green px-6 py-3.5 text-center font-extrabold text-volcan-dark transition hover:-translate-y-1 hover:bg-lime-300"
+          >
+            Conocer las canchas
+          </a>
+
+          <a
+            href="/open-play"
+            class="rounded-lg border-2 border-volcan-green px-6 py-3.5 text-center font-extrabold text-white transition hover:bg-volcan-green hover:text-volcan-dark"
+          >
+            Ver Open Play
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presentación -->
+  <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+    <div class="max-w-3xl">
+      <p
+        class="mb-3 text-sm font-black uppercase tracking-[0.2em] text-volcan-blue"
+      >
+        Volcan Courts
+      </p>
+
+      <h2
+        class="text-3xl font-black text-volcan-dark sm:text-4xl lg:text-5xl"
+      >
+        Una experiencia única en La Fortuna
+      </h2>
+
+      <p class="mt-5 text-base leading-relaxed text-volcan-gray sm:text-lg">
+        Contamos con tres canchas para juegos recreativos, clases,
+        Open Play y torneos, rodeadas de naturaleza y con una vista
+        privilegiada al Volcán Arenal.
+      </p>
+    </div>
+
+    <div
+      class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <article
+        class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5 transition hover:-translate-y-1"
+      >
+        <span class="text-3xl font-black text-volcan-blue">01</span>
+        <h3 class="mt-5 text-xl font-black">Tres canchas</h3>
+        <p class="mt-3 text-volcan-gray">
+          Instalaciones para partidos, clases, clínicas y torneos.
+        </p>
+      </article>
+
+      <article
+        class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5 transition hover:-translate-y-1"
+      >
+        <span class="text-3xl font-black text-volcan-blue">02</span>
+        <h3 class="mt-5 text-xl font-black">Open Play</h3>
+        <p class="mt-3 text-volcan-gray">
+          Actividades organizadas para distintos niveles de juego.
+        </p>
+      </article>
+
+      <article
+        class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5 transition hover:-translate-y-1 md:col-span-2 lg:col-span-1"
+      >
+        <span class="text-3xl font-black text-volcan-blue">03</span>
+        <h3 class="mt-5 text-xl font-black">Vista al volcán</h3>
+        <p class="mt-3 text-volcan-gray">
+          Una experiencia deportiva diferente en La Fortuna.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Open Play -->
+  <section class="bg-volcan-blue text-white">
+    <div
+      class="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-20 sm:px-8 md:flex-row md:items-center md:justify-between lg:py-24"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="mb-3 text-sm font-black uppercase tracking-[0.2em] text-volcan-green"
+        >
+          Agenda semanal
+        </p>
+
+        <h2 class="text-3xl font-black sm:text-4xl lg:text-5xl">
+          Encuentra tu próximo Open Play
+        </h2>
+
+        <p class="mt-5 text-blue-100 sm:text-lg">
+          Conoce los horarios y actividades disponibles para cada nivel.
+        </p>
+      </div>
+
+      <a
+        href="/open-play"
+        class="shrink-0 rounded-lg bg-volcan-green px-6 py-3.5 text-center font-extrabold text-volcan-dark transition hover:-translate-y-1 hover:bg-lime-300"
+      >
+        Consultar horarios
+      </a>
+    </div>
+  </section>
+</MainLayout>

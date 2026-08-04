@@ -1,0 +1,419 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const weeklyActivities = [
+  {
+    day: "Lunes",
+    name: "Canchas abiertas",
+    level: "Todos los niveles",
+    time: "Según disponibilidad",
+    dupr: "No aplica",
+    description:
+      "Los lunes no hay Open Play. Las canchas permanecen disponibles para reservaciones regulares mediante PickCR.",
+    reservationUrl:
+      "https://pickcr.com/jugar/ajIuu8qN9D96EHdv2zT1",
+    available: true,
+    isOpenPlay: false,
+  },
+  {
+    day: "Martes",
+    name: "Intermedios y avanzados",
+    level: "Nivel intermedio y avanzado",
+    time: "6:00 p. m. – 8:00 p. m.",
+    dupr: "Sin DUPR",
+    description:
+      "Partidos organizados para jugadores intermedios y avanzados, sin registro de resultados en DUPR.",
+    reservationUrl:
+      "https://pickcr.com/open-play/sBcXVJvZgLBbPmi4NDOp",
+    available: true,
+    isOpenPlay: true,
+  },
+  {
+    day: "Miércoles",
+    name: "Open Play Principiantes",
+    level: "Nivel principiante",
+    time: "6:00 p. m. – 8:00 p. m.",
+    dupr: "Con DUPR",
+    description:
+      "Open Play para jugadores principiantes con registro de resultados en DUPR.",
+    reservationUrl:
+      "https://pickcr.com/open-play/Nlyc9sBD0JrbJ4hRuFoT",
+    available: true,
+    isOpenPlay: true,
+  },
+  {
+    day: "Jueves",
+    name: "Intermedios y avanzados",
+    level: "Nivel intermedio y avanzado",
+    time: "6:00 p. m. – 8:00 p. m.",
+    dupr: "Con DUPR",
+    description:
+      "Partidos competitivos para jugadores intermedios y avanzados con resultados registrados en DUPR.",
+    reservationUrl:
+      "https://pickcr.com/open-play/Qxt4njNFM6XMPwtoeqMg",
+    available: true,
+    isOpenPlay: true,
+  },
+  {
+    day: "Viernes",
+    name: "Open Play Femenino",
+    level: "Mujeres",
+    time: "6:00 p. m. – 8:00 p. m.",
+    dupr: "DUPR opcional",
+    description:
+      "Open Play exclusivo para mujeres. Cada participante puede decidir si desea registrar sus resultados en DUPR.",
+    reservationUrl:
+      "https://pickcr.com/open-play/37BqtAu1UJjQfJsoaYFP",
+    available: true,
+    isOpenPlay: true,
+  },
+];
+---
+
+<MainLayout
+  title="Open Play"
+  description="Conoce la programación semanal de Open Play y reserva tu espacio en Volcan Courts."
+>
+  <PageHeader
+    eyebrow="Juega, comparte y mejora"
+    title="Open Play"
+    description="Inscríbete individualmente, conoce nuevos jugadores y disfruta partidos organizados según tu nivel."
+  />
+
+  <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p
+          class="text-sm font-black uppercase tracking-[0.2em] text-volcan-blue"
+        >
+          Comunidad Volcan Courts
+        </p>
+
+        <h2
+          class="mt-3 text-3xl font-black text-volcan-dark sm:text-4xl lg:text-5xl"
+        >
+          ¿Qué es Open Play?
+        </h2>
+
+        <p class="mt-5 text-lg leading-relaxed text-volcan-gray">
+          Es una actividad en la que puedes inscribirte individualmente
+          y participar en partidos organizados con diferentes compañeros
+          y rivales.
+        </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-volcan-gray">
+          No necesitas llevar pareja. Nosotros organizamos las rotaciones
+          para que puedas jugar, mejorar tu nivel y formar parte de la
+          comunidad de Volcan Courts.
+        </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-volcan-gray">
+          Los lunes no realizamos Open Play, por lo que las canchas
+          permanecen abiertas para reservaciones regulares.
+        </p>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <article
+          class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5"
+        >
+          <span
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-volcan-green font-black text-volcan-dark"
+          >
+            01
+          </span>
+
+          <h3 class="mt-5 text-xl font-black text-volcan-dark">
+            Reserva individual
+          </h3>
+
+          <p class="mt-3 text-volcan-gray">
+            No necesitas tener una pareja para participar.
+          </p>
+        </article>
+
+        <article
+          class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5"
+        >
+          <span
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-volcan-green font-black text-volcan-dark"
+          >
+            02
+          </span>
+
+          <h3 class="mt-5 text-xl font-black text-volcan-dark">
+            Partidos rotativos
+          </h3>
+
+          <p class="mt-3 text-volcan-gray">
+            Juega con diferentes compañeros y rivales.
+          </p>
+        </article>
+
+        <article
+          class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5"
+        >
+          <span
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-volcan-green font-black text-volcan-dark"
+          >
+            03
+          </span>
+
+          <h3 class="mt-5 text-xl font-black text-volcan-dark">
+            Diferentes niveles
+          </h3>
+
+          <p class="mt-3 text-volcan-gray">
+            Encuentra una actividad adecuada para tu experiencia.
+          </p>
+        </article>
+
+        <article
+          class="rounded-2xl border border-gray-200 bg-white p-7 shadow-lg shadow-blue-950/5"
+        >
+          <span
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-volcan-green font-black text-volcan-dark"
+          >
+            04
+          </span>
+
+          <h3 class="mt-5 text-xl font-black text-volcan-dark">
+            Registro DUPR
+          </h3>
+
+          <p class="mt-3 text-volcan-gray">
+            Algunas actividades permiten registrar los resultados.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50">
+    <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+      <div class="max-w-3xl">
+        <p
+          class="text-sm font-black uppercase tracking-[0.2em] text-volcan-blue"
+        >
+          Programación semanal
+        </p>
+
+        <h2
+          class="mt-3 text-3xl font-black text-volcan-dark sm:text-4xl lg:text-5xl"
+        >
+          Encuentra tu actividad
+        </h2>
+
+        <p class="mt-5 text-lg text-volcan-gray">
+          Consulta la programación semanal y reserva directamente
+          mediante PickCR.
+        </p>
+      </div>
+
+      <div
+        class="mt-12 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+      >
+        {
+          weeklyActivities.map((activity) => (
+            <article
+              class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl shadow-blue-950/10 transition duration-300 hover:-translate-y-1"
+            >
+              <div class="bg-volcan-blue p-6 text-white">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <p
+                    class="text-sm font-black uppercase tracking-wider text-volcan-green"
+                  >
+                    {activity.day}
+                  </p>
+
+                  <span
+                    class:list={[
+                      "rounded-full px-3 py-1 text-xs font-black",
+                      activity.available
+                        ? "bg-volcan-green text-volcan-dark"
+                        : "bg-gray-200 text-gray-600",
+                    ]}
+                  >
+                    {activity.available ? "Disponible" : "Cupo lleno"}
+                  </span>
+                </div>
+
+                <h3 class="mt-4 text-xl font-black">
+                  {activity.name}
+                </h3>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <div>
+                  <p class="text-sm font-bold text-volcan-gray">
+                    Nivel
+                  </p>
+
+                  <p class="mt-1 font-black text-volcan-dark">
+                    {activity.level}
+                  </p>
+                </div>
+
+                <div class="mt-5">
+                  <p class="text-sm font-bold text-volcan-gray">
+                    Horario
+                  </p>
+
+                  <p class="mt-1 font-black text-volcan-dark">
+                    {activity.time}
+                  </p>
+                </div>
+
+                <div class="mt-5">
+                  <p class="text-sm font-bold text-volcan-gray">
+                    DUPR
+                  </p>
+
+                  <p
+                    class:list={[
+                      "mt-1 font-black",
+                      activity.dupr === "Con DUPR"
+                        ? "text-volcan-blue"
+                        : activity.dupr === "DUPR opcional"
+                          ? "text-amber-600"
+                          : "text-volcan-dark",
+                    ]}
+                  >
+                    {activity.dupr}
+                  </p>
+                </div>
+
+                <p
+                  class="mt-5 flex-1 text-sm leading-relaxed text-volcan-gray"
+                >
+                  {activity.description}
+                </p>
+
+                {
+                  activity.available ? (
+                    <a
+                      href={activity.reservationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mt-7 inline-flex w-full items-center justify-center rounded-lg bg-volcan-green px-5 py-3.5 text-center font-extrabold text-volcan-dark transition hover:-translate-y-1 hover:bg-lime-300"
+                    >
+                      {
+                        activity.isOpenPlay
+                          ? "Unirse al Open Play"
+                          : "Reservar cancha"
+                      }
+                    </a>
+                  ) : (
+                    <span
+                      class="mt-7 inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg bg-gray-200 px-5 py-3.5 text-center font-extrabold text-gray-500"
+                    >
+                      Cupo lleno
+                    </span>
+                  )
+                }
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+    <div
+      class="overflow-hidden rounded-3xl bg-volcan-dark p-8 text-white sm:p-12"
+    >
+      <p
+        class="text-sm font-black uppercase tracking-[0.2em] text-volcan-green"
+      >
+        Antes de jugar
+      </p>
+
+      <h2 class="mt-3 text-3xl font-black sm:text-4xl">
+        Recomendaciones
+      </h2>
+
+      <div class="mt-10 grid gap-7 sm:grid-cols-2">
+        <div class="flex gap-4">
+          <span class="font-black text-volcan-green">✓</span>
+
+          <div>
+            <h3 class="font-black">Llega con anticipación</h3>
+
+            <p class="mt-1 text-gray-300">
+              Procura llegar al menos 10 minutos antes.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="font-black text-volcan-green">✓</span>
+
+          <div>
+            <h3 class="font-black">Utiliza ropa deportiva</h3>
+
+            <p class="mt-1 text-gray-300">
+              Usa calzado adecuado para jugar de forma segura.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="font-black text-volcan-green">✓</span>
+
+          <div>
+            <h3 class="font-black">Selecciona tu nivel</h3>
+
+            <p class="mt-1 text-gray-300">
+              Inscríbete en el grupo correspondiente a tu experiencia.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="font-black text-volcan-green">✓</span>
+
+          <div>
+            <h3 class="font-black">Reserva con anticipación</h3>
+
+            <p class="mt-1 text-gray-300">
+              Los espacios disponibles son limitados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-volcan-blue text-white">
+    <div
+      class="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-16 sm:px-8 md:flex-row md:items-center md:justify-between"
+    >
+      <div class="max-w-2xl">
+        <p
+          class="text-sm font-black uppercase tracking-[0.2em] text-volcan-green"
+        >
+          Reserva tu espacio
+        </p>
+
+        <h2 class="mt-3 text-3xl font-black sm:text-4xl">
+          Nos vemos en la cancha
+        </h2>
+
+        <p class="mt-4 text-blue-100">
+          Consulta la disponibilidad y reserva directamente en PickCR.
+        </p>
+      </div>
+
+      <a
+        href="https://pickcr.com/jugar/ajIuu8qN9D96EHdv2zT1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 rounded-lg bg-volcan-green px-7 py-3.5 text-center font-extrabold text-volcan-dark transition hover:-translate-y-1 hover:bg-lime-300"
+      >
+        Reservar una cancha
+      </a>
+    </div>
+  </section>
+</MainLayout>

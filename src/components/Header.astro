@@ -1,0 +1,93 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { name: "Inicio", href: "/" },
+  { name: "Canchas", href: "/canchas" },
+  { name: "Open Play", href: "/open-play" },
+  { name: "Torneos", href: "/torneos" },
+  { name: "Galería", href: "/galeria" },
+  { name: "Contacto", href: "/contacto" },
+];
+
+const reservationUrl = "https://pickcr.com/jugar/ajIuu8qN9D96EHdv2zT1"
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 h-20 bg-volcan-blue/95 text-white shadow-lg backdrop-blur-md"
+>
+  <div
+    class="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8"
+  >
+    <a href="/" class="text-lg font-black tracking-wide sm:text-xl">
+      VOLCAN <span class="text-volcan-green">COURTS</span>
+    </a>
+
+    <nav
+      class="hidden items-center gap-5 lg:flex"
+      aria-label="Navegación principal"
+    >
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "border-b-2 px-1 py-2 text-sm font-bold transition-colors",
+              currentPath === link.href
+                ? "border-volcan-green text-volcan-green"
+                : "border-transparent hover:border-volcan-green hover:text-volcan-green",
+            ]}
+          >
+            {link.name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a
+      href={reservationUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden rounded-lg bg-volcan-green px-5 py-2.5 font-extrabold text-volcan-dark transition hover:-translate-y-0.5 hover:bg-lime-300 lg:inline-flex"
+    >
+      Reservar
+    </a>
+
+    <details class="relative lg:hidden">
+      <summary
+        class="flex h-11 w-12 cursor-pointer list-none items-center justify-center rounded-lg bg-volcan-green text-2xl font-black text-volcan-dark"
+      >
+        ☰
+      </summary>
+
+      <nav
+        class="absolute right-0 top-14 flex w-64 flex-col overflow-hidden rounded-xl bg-white text-gray-900 shadow-2xl"
+      >
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "border-b border-gray-100 px-5 py-4 font-bold",
+                currentPath === link.href
+                  ? "bg-gray-100 text-volcan-blue"
+                  : "hover:bg-gray-50 hover:text-volcan-blue",
+              ]}
+            >
+              {link.name}
+            </a>
+          ))
+        }
+
+        <a
+          href={reservationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-volcan-green px-5 py-4 font-extrabold text-volcan-dark"
+        >
+          Reservar
+        </a>
+      </nav>
+    </details>
+  </div>
+</header>

@@ -1,0 +1,67 @@
+---
+import PageHeader from "../components/PageHeader.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const features = [
+  
+{number : "01",
+  title: "Tres canchas",
+  description: "Instaciones preparadas para partidos, clases y torneos.",
+},
+  {
+    number: "02",
+    title: "Iluminación",
+    description: "Juega durante el día o en horario nocturno.",
+  },
+  {
+    number: "03",
+    title: "Vista al volcán",
+    description: "Disfruta el pickleball frente al Volcán Arenal.",
+  },
+];
+---
+
+<MainLayout title="Nuestras canchas">
+  <PageHeader
+    eyebrow="Instalaciones"
+    title="Nuestras canchas"
+    description="Tres canchas de pickleball rodeadas de naturaleza en La Fortuna."
+  />
+
+  <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+  <div class="mx-auto max-w-3xl text-center">
+    <p
+      class="text-sm font-black uppercase tracking-[0.2em] text-volcan-blue"
+    >
+      Recorrido por Volcan Courts
+    </p>
+
+    <h2
+      class="mt-3 text-3xl font-black text-volcan-dark sm:text-4xl lg:text-5xl"
+    >
+      Conoce nuestras canchas
+    </h2>
+
+    <p class="mt-5 text-volcan-gray sm:text-lg">
+      Descubre nuestros espacios para jugar pickleball
+      frente al Volcán Arenal.
+    </p>
+  </div>
+
+  <div
+    class="mt-12 overflow-hidden rounded-2xl bg-black shadow-2xl shadow-blue-950/20"
+  >
+    <video
+      class="aspect-video w-full"
+      controls
+      playsinline
+      preload="metadata"
+      poster="/images/canchas-volcan-courts.jpg"
+    >
+      <source src="/videos/volcan-courts.mp4" type="video/mp4" />
+
+      Tu navegador no puede reproducir este video.
+    </video>
+  </div>
+</section>
+</MainLayout>

@@ -1,0 +1,20 @@
+---
+import { FaWhatsapp } from "react-icons/fa";
+
+const message =
+  "Hola, quiero solicitar información para reservar en Volcan Courts.";
+
+const whatsappUrl =
+  `https://wa.me/50663148883?text=${encodeURIComponent(message)}`;
+---
+
+<a
+  href={whatsappUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Reservar por WhatsApp"
+  title="Reservar por WhatsApp"
+  class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-xl shadow-black/25 transition hover:-translate-y-1 hover:scale-105 hover:bg-green-600"
+>
+  <FaWhatsapp className="h-8 w-8" />
+</a>
