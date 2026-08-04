@@ -1,43 +1,62 @@
-# Astro Starter Kit: Minimal
+# Volcan Courts
 
-```sh
-npm create astro@latest -- --template minimal
+Página web oficial de Volcan Courts, club de pickleball ubicado en La Fortuna, San Carlos, Costa Rica.
+
+## Funcionalidades
+
+- Información sobre las canchas.
+- Programación semanal de Open Play.
+- Próximos torneos y resultados.
+- Galería de fotografías.
+- Reservaciones mediante PickCR.
+- Contacto por WhatsApp.
+- Ubicación y horarios.
+- Diseño completamente responsive.
+
+## Tecnologías
+
+- Astro
+- Tailwind CSS
+- React Icons
+
+## Instalación
+
+Clonar el repositorio e instalar las dependencias:
+
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Iniciar el servidor de desarrollo:
 
-## 🚀 Project Structure
+```bash
+npm run dev
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+La página estará disponible en:
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+http://localhost:4321
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Construcción
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Generar la versión de producción:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm run build
+```
 
-## 🧞 Commands
+Previsualizar la versión de producción:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run preview
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Reservaciones
 
-## 👀 Want to learn more?
+Las reservaciones se realizan mediante [PickCR](https://pickcr.com/jugar/ajIuu8qN9D96EHdv2zT1).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contacto
+
+WhatsApp: +506 6314 8883
