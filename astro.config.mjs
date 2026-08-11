@@ -9,6 +9,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
-  integrations: [react()]
+  site: 'https://anibalcastro.github.io',
+  base: '/VolcanCourts-WebPage',
 });
