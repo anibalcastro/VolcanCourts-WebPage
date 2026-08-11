@@ -2,10 +2,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import PageHeader from "../components/PageHeader.astro";
 
+const base = import.meta.env.BASE_URL;
+
 const images = Array.from({ length: 14 }, (_, index) => ({
-  src: `/images/Image${index + 1}.jpeg`,
+  src: `${base}images/Image${index + 1}.jpeg`,
   alt: `Volcan Courts - Fotografía ${index + 1}`,
 }));
+---
 ---
 
 <MainLayout

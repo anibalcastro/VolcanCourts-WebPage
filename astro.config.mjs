@@ -11,6 +11,6 @@ export default defineConfig({
   },
 
   site: 'https://anibalcastro.github.io',
-  base: '/VolcanCourts-WebPage',
+  base: '/VolcanCourts-WebPage/',
   integrations: [react()],
 });
